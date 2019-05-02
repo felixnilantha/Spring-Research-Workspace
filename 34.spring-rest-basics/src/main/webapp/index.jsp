@@ -13,6 +13,8 @@
 <hr>
 
 <a href="${pageContext.request.contextPath}/test/hello"> Test REST Controller Page</a>
+<br>
+<a href="${pageContext.request.contextPath}/api/students">REST Get Students</a>
 
 </body>
 </html>
