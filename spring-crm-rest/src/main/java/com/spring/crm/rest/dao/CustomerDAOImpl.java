@@ -41,7 +41,8 @@ public class CustomerDAOImpl implements CustomerDAO {
 		// get current hibernate session
 		Session currentSession = sessionFactory.getCurrentSession();
 		
-		// save/upate the customer ... finally LOL
+		// null or empty insert NEW
+		// save/upate the customer 
 		currentSession.saveOrUpdate(theCustomer);
 		
 	}
@@ -65,6 +66,7 @@ public class CustomerDAOImpl implements CustomerDAO {
 		Session currentSession = sessionFactory.getCurrentSession();
 		
 		// delete object with primary key
+		@SuppressWarnings("rawtypes")
 		Query theQuery = 
 				currentSession.createQuery("delete from Customer where id=:customerId");
 		theQuery.setParameter("customerId", theId);
